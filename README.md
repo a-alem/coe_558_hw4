@@ -1,4 +1,4 @@
-# COE 558 Calculator Cloud Application
+# COE 558 Calculator App - Homework 4
 
 This project is a simple cloud-hosted calculator web application developed for the COE 558 homework. It demonstrates a frontend web page communicating with a backend RESTful API deployed on separate Amazon EC2 instances.
 
@@ -62,6 +62,23 @@ api.coe558calculatorappalem.com  -> Backend EC2 public IP
 ```
 
 ---
+
+# Running the project
+
+First make sure that your instance IP matches the resolved IP in your DNS record so that LetsEncrypt certbot can auto generate the TLS certificate.
+Clone the repository, and run the following:
+
+For backend:
+```bash
+cd backend
+docker compose up -d
+```
+
+For frontend:
+```bash
+cd frontend
+docker compose up -d
+```
 
 # API Docs
 
