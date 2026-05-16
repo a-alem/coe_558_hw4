@@ -30,7 +30,7 @@ resource "aws_instance" "coe_558_hw4_backend_server" {
   instance_type = "t3.medium"
   availability_zone = var.av_zone
   subnet_id = "subnet-07856761a4ac292b1"
-  key_name = aws_key_pair.coe_558_hw4_frontend_server.key_name
+  key_name = aws_key_pair.coe_558_hw4_backend_server.key_name
   user_data = file("${path.module}/scripts/install_docker.sh")
   vpc_security_group_ids = [
     "sg-09a862554f50c67bc"
