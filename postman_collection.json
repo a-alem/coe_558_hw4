@@ -1,0 +1,410 @@
+{
+  "info": {
+    "_postman_id": "bff9c8bf-a32b-4b23-9cc1-93d3e97c64c5",
+    "name": "COE 558 - Homework 4 - Calculator API collection",
+    "description": "Calculator API collection for COE 558 homework 4",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "37964490"
+  },
+  "item": [
+    {
+      "name": "Health check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.coe558calculatorappalem.com/health",
+          "protocol": "https",
+          "host": [
+            "api",
+            "coe558calculatorappalem",
+            "com"
+          ],
+          "path": [
+            "health"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Success",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://api.coe558calculatorappalem.com/health",
+              "protocol": "https",
+              "host": [
+                "api",
+                "coe558calculatorappalem",
+                "com"
+              ],
+              "path": [
+                "health"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Length",
+              "value": "20"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 16 May 2026 14:57:31 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "uvicorn"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"status\": \"healthy\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Calculate",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"num1\": 1,\n    \"num2\": 20,\n    \"operation\": \"add\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://api.coe558calculatorappalem.com/calculate",
+          "protocol": "https",
+          "host": [
+            "api",
+            "coe558calculatorappalem",
+            "com"
+          ],
+          "path": [
+            "calculate"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Add - Success",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"num1\": 1,\n    \"num2\": 2,\n    \"operation\": \"add\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://api.coe558calculatorappalem.com/calculate",
+              "protocol": "https",
+              "host": [
+                "api",
+                "coe558calculatorappalem",
+                "com"
+              ],
+              "path": [
+                "calculate"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Length",
+              "value": "54"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 16 May 2026 15:00:03 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "uvicorn"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"num1\": 1,\n    \"num2\": 2,\n    \"operation\": \"add\",\n    \"result\": 3\n}"
+        },
+        {
+          "name": "Subtract - Success",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"num1\": 1,\n    \"num2\": 2,\n    \"operation\": \"subtract\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://api.coe558calculatorappalem.com/calculate",
+              "protocol": "https",
+              "host": [
+                "api",
+                "coe558calculatorappalem",
+                "com"
+              ],
+              "path": [
+                "calculate"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Length",
+              "value": "60"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 16 May 2026 15:00:50 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "uvicorn"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"num1\": 1,\n    \"num2\": 2,\n    \"operation\": \"subtract\",\n    \"result\": -1\n}"
+        },
+        {
+          "name": "Multiply - Success",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"num1\": 1,\n    \"num2\": 2,\n    \"operation\": \"multiply\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://api.coe558calculatorappalem.com/calculate",
+              "protocol": "https",
+              "host": [
+                "api",
+                "coe558calculatorappalem",
+                "com"
+              ],
+              "path": [
+                "calculate"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Length",
+              "value": "59"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 16 May 2026 15:01:38 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "uvicorn"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"num1\": 1,\n    \"num2\": 2,\n    \"operation\": \"multiply\",\n    \"result\": 2\n}"
+        },
+        {
+          "name": "Divide - Success",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"num1\": 1,\n    \"num2\": 2,\n    \"operation\": \"divide\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://api.coe558calculatorappalem.com/calculate",
+              "protocol": "https",
+              "host": [
+                "api",
+                "coe558calculatorappalem",
+                "com"
+              ],
+              "path": [
+                "calculate"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Length",
+              "value": "57"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 16 May 2026 15:01:54 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "uvicorn"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"num1\": 1,\n    \"num2\": 2,\n    \"operation\": \"divide\",\n    \"result\": 0.5\n}"
+        },
+        {
+          "name": "Error - Unsupported operation",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"num1\": 1,\n    \"num2\": 2,\n    \"operation\": \"hi\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://api.coe558calculatorappalem.com/calculate",
+              "protocol": "https",
+              "host": [
+                "api",
+                "coe558calculatorappalem",
+                "com"
+              ],
+              "path": [
+                "calculate"
+              ]
+            }
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Length",
+              "value": "94"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 16 May 2026 15:00:27 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "uvicorn"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"detail\": \"Unsupported operation. Supported operations are: add, subtract, multiply, divide.\"\n}"
+        },
+        {
+          "name": "Error - Divide by zero",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"num1\": 1,\n    \"num2\": 0,\n    \"operation\": \"divide\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://api.coe558calculatorappalem.com/calculate",
+              "protocol": "https",
+              "host": [
+                "api",
+                "coe558calculatorappalem",
+                "com"
+              ],
+              "path": [
+                "calculate"
+              ]
+            }
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Length",
+              "value": "45"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 16 May 2026 15:02:06 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "uvicorn"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"detail\": \"Division by zero is not allowed.\"\n}"
+        }
+      ]
+    }
+  ]
+}
